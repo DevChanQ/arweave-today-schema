@@ -1,12 +1,16 @@
+![Arweave Today Banner](./banner.png)
+
 # Arweave Today - Content Schema
 
 This README describes the structure of the `Arweave Today` article JSON, which captures a snapshot of noteworthy updates, community highlights, and developer activities in the Arweave ecosystem. This schema supports structured, media-rich storytelling for readers and frontend renderers.
+
+[Check out Arweave Today](https://arweavehub.com/today)
 
 ---
 
 ## Usage
 
-You can get the latset edition of Arweave Today by fetching https://today_arweave.ar.io. You can also get previous editions of Arweave Today by fetching the content of the Arweave transaction id stored in the `previous` field of the Arweave Today JSON, e.g. `https://arweave.net/{previous}`
+You can get the JSON content of the latest edition of Arweave Today at https://today_arweave.ar.io. You can also get previous editions of Arweave Today by fetching the content of the Arweave transaction id stored in the `previous` field of the Arweave Today JSON, e.g. `https://arweave.net/{previous}`
 
 ## :package: JSON Schema
 
