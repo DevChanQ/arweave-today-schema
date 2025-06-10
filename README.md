@@ -4,28 +4,32 @@ This README describes the structure of the `Arweave Today` article JSON, which c
 
 ---
 
-## :package: JSON Structure
+## Usage
+
+You can get the latset edition of Arweave Today by fetching https://today_arweave.ar.io. You can also get previous editions of Arweave Today by fetching the content of the Arweave transaction id stored in the `previous` field of the Arweave Today JSON, e.g. `https://arweave.net/{previous}`
+
+## :package: JSON Schema
 
 ### Top-Level Fields
 
-- **`topics`** (`Array<Object>`)
+- **`topics`** (`Array<Topic>`)
   A list of featured stories or posts from the Arweave community.
 
-- **`chitchat`** (`Object`)
+- **`chitchat`** (`Topic`)
   A light or informal sidebar section with a tip or fun fact related to the permaweb.
 
-- **`suggested`** (`Object`)
+- **`suggested`** (`Topic`)
   A recommended long-form article or reading piece that complements the day's updates.
 
 - **`ts`** (`Number`)
   Unix timestamp in milliseconds, representing the publication date/time of the digest.
 
 - **`previous`** (`String`)
-  ID or reference to the previous issue/article (used for navigation or versioning).
+  Arweave transaction id of the previous issue/article (used for navigation).
 
 ---
 
-## :newspaper: Topics
+## :newspaper: Topic type
 
 Each object in the `topics` array represents a featured post or announcement.
 
@@ -43,13 +47,16 @@ Each object in the `topics` array represents a featured post or announcement.
 - **`nature`** (`String`)
   The type/category of the post. Used for tagging and filtering.
 
+- **`button`** *(optional)* (`String`)
+  Label for the call-to-action button (e.g., `"Read article"`).
+
 - **`image`** *(optional)* (`String`)
   URL to an image preview or poster.
 
 - **`video`** *(optional)* (`String`)
   URL to a video clip related to the post.
 
-- **`featured`** *(optional)* (`String` or `Boolean`)
+- **`featured`** *(optional)* (`Boolean`)
   Indicates if this topic is visually highlighted in the layout (e.g., `"true"`).
 
 ---
@@ -77,52 +84,6 @@ The `nature` field helps categorize topics for filtering or visual grouping. Val
 - `privacy`
 - `storage`
 - `funding`
-
----
-
-## :speech_balloon: Chitchat
-
-An engaging sidebar snippet.
-
-### Fields:
-
-- **`headline`** (`String`)
-  Title of the tip or blurb.
-
-- **`body`** (`String`)
-  Description or teaser text.
-
-- **`image`** (`String`)
-  A visual (often playful) GIF or static image.
-
-- **`nature`** (`String`)
-  Type of snippet (e.g., `"Did you know?"`).
-
----
-
-## :books: Suggested Read
-
-A featured long-form external article or blog post.
-
-### Fields:
-
-- **`url`** (`String`)
-  Link to the external article.
-
-- **`headline`** (`String`)
-  Title of the article.
-
-- **`body`** (`String`)
-  Description or excerpt from the article.
-
-- **`image`** (`String`)
-  Banner or thumbnail image.
-
-- **`button`** (`String`)
-  Label for the call-to-action button (e.g., `"Read article"`).
-
-- **`nature`** (`String`)
-  Label describing the article category (e.g., `"today's read"`).
 
 ---
 
