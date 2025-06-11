@@ -12,6 +12,10 @@ This README describes the structure of the `Arweave Today` article JSON, which c
 
 You can get the JSON content of the latest edition of Arweave Today at https://today_arweave.ar.io. You can also get previous editions of Arweave Today by fetching the content of the Arweave transaction id stored in the `previous` field of the Arweave Today JSON, e.g. `https://arweave.net/{previous}`
 
+## RSS feed
+
+Arweave Today is also available as a RSS feed at https://today-rss_arweave.ar.io
+
 ## :package: JSON Schema
 
 ### Top-Level Fields
