@@ -6,8 +6,6 @@ This README describes the structure of the `Arweave Today` article JSON, which c
 
 [Check out Arweave Today](https://arweavehub.com/today)
 
----
-
 ## Usage
 
 You can access the JSON content for the latest edition of Arweave Today at [https://today_arweave.ar.io](https://today_arweave.ar.io). To view previous editions, use the Arweave transaction ID found in the `previous` field of the current edition’s JSON. For example, you can fetch a previous edition at `https://arweave.net/{previous}`.
@@ -15,8 +13,6 @@ You can access the JSON content for the latest edition of Arweave Today at [http
 ## RSS Feed
 
 Arweave Today is also available as an RSS feed at [https://today-rss_arweave.ar.io](https://today-rss_arweave.ar.io).
-
----
 
 ## :package: JSON Schema
 
@@ -36,8 +32,6 @@ Arweave Today is also available as an RSS feed at [https://today-rss_arweave.ar.
 
 - **`previous`** (`String`)  
   The Arweave transaction ID of the previous issue or article, used for navigation.
-
----
 
 ## :newspaper: Topic Type
 
@@ -72,8 +66,6 @@ Each object in the `topics` array represents a featured post or announcement.
 - **`featured`** *(optional)* (`Boolean`)  
   Indicates if this topic should be visually highlighted in the layout (e.g., `true`).
 
----
-
 ## :label: Supported `nature` Values
 
 The `nature` field helps categorize topics for filtering or visual grouping. Supported values include:
@@ -97,8 +89,6 @@ The `nature` field helps categorize topics for filtering or visual grouping. Sup
 - `privacy`
 - `storage`
 - `funding`
-
----
 
 ## :compass: Example Use Cases
 
