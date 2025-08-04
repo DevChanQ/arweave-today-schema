@@ -89,6 +89,9 @@ The `nature` field helps categorize topics for filtering or visual grouping. Sup
 - `privacy`
 - `storage`
 - `funding`
+- `partnership`
+- `depin`
+- `interview`
 
 ## :compass: Example Use Cases
 
